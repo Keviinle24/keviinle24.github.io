@@ -1,0 +1,80 @@
+ 
+.name {
+  font-weight: bold;
+  display: flex;
+  font-size: 65px;
+  justify-content: flex-start; /* Align items to the left */
+  padding-left: 13%;
+  padding-top: 18%;
+   
+  
+  
+}
+
+
+.caption {
+    font-size: 120%; /* Font size for the caption */
+    color: #666; /* Medium gray text color for contrast */
+ 
+    width: 45%; /* Ensure the text does not exceed 80% of the container's width */
+    line-height: 1.5; /* Improve readability with line spacing */
+    padding-left: 13%;
+    margin-top: 40;
+ 
+    
+    
+}
+
+.roles {
+    background: linear-gradient(270deg, #00fff0, #ff00f5);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+
+    font-weight: bold;
+    display: flex;
+    font-size: 65px;
+    justify-content: flex-start; /* Align items to the left */
+
+}
+
+.connect button {
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 18px 34px;
+    font-size: 18px;
+    margin-left: 13%;
+      position: relative;
+      background-color: transparent;
+      transition: 0.3s ease-in-out;
+      margin-top: 4%;
+     
+  }
+  .connect button span {
+    z-index: 1;
+  }
+  .connect button::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(40deg, #00fff0, #ff00f5);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+  .connect button:hover {
+    color: #121212;
+  }
+ 
+  
+  .connect button:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+}

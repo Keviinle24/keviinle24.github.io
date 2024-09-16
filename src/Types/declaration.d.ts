@@ -1,0 +1,6 @@
+// src/types/declaration.d.ts
+declare module '*.svg' {
+    const content: any;
+    export default content;
+  }
+  
