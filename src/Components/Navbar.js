@@ -43,7 +43,7 @@ export const NavBar = () => {
         
           <Navbar.Brand href="/"  >
        
-       <span>Kevin Le</span> 
+       <div>Kevin.le</div> 
         
           </Navbar.Brand>
         
@@ -62,9 +62,10 @@ export const NavBar = () => {
                 <a href="#"><img src={navIcon2} alt="" /></a>
                 <a href="#"><img src={navIcon3} alt="" /></a>
               </div>
-              <HashLink to='#connect'>
-                <button className="vvd"><span>Resume <a href="#"><img className="download-icon" src={DownloadIcon} alt="" /></a></span></button>
-              </HashLink>
+              <div className="resume">
+        
+              <a href="#"> <button className="vvd"><span>Resume <img className="download-icon" src={DownloadIcon} alt="" /></span></button></a>
+              </div>
             </span>
           </Navbar.Collapse>
         </Container>

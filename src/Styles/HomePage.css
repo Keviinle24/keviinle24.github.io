@@ -2,7 +2,7 @@
 .name {
   font-weight: bold;
   display: flex;
-  font-size: 65px;
+  font-size: 80px;
   justify-content: flex-start; /* Align items to the left */
   padding-left: 13%;
   padding-top: 18%;
@@ -13,8 +13,8 @@
 
 
 .caption {
-    font-size: 120%; /* Font size for the caption */
-    color: #666; /* Medium gray text color for contrast */
+    font-size: 110%; /* Font size for the caption */
+    color: #898989; /* Medium gray text color for contrast */
  
     width: 45%; /* Ensure the text does not exceed 80% of the container's width */
     line-height: 1.5; /* Improve readability with line spacing */
@@ -34,7 +34,7 @@
 
     font-weight: bold;
     display: flex;
-    font-size: 65px;
+    font-size: 80px;
     justify-content: flex-start; /* Align items to the left */
 
 }
@@ -77,4 +77,15 @@
     height: 100%;
     position: absolute;
     
+}
+
+
+
+
+.headshot {
+  width: 550;
+  display: flex;
+  margin-left: 52%;
+  margin-top: -570;
+ 
 }

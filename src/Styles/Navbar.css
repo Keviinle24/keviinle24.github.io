@@ -9,7 +9,7 @@ nav.navbar {
   
   }
   nav.navbar.scrolled {
-    padding: 0px 0; 
+    padding: 8px 0; 
     background-color: #121212;
   }
   nav.navbar a.navbar-brand {
@@ -178,6 +178,12 @@ nav.navbar {
 
 }
 
-.download-icon a:hover img {
+.resume a:hover img {
       filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
   }
+
+  .resume a img {
+
+    transition: 0.3s ease-in-out;
+}
+

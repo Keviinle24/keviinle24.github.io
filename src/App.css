@@ -31,7 +31,8 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+   
+   background-image: url('Assets/Images/grey_hexagons_on_black_background\ 1-2.png');
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
