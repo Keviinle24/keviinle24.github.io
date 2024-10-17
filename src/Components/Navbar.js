@@ -38,7 +38,9 @@ export const NavBar = () => {
     //expand="md" means that the navbar will be collapsed (usually shown as a hamburger menu) on small and medium-sized screens, and it will expand into a full navbar on larger screens.
     //Clicking on Links (Home, Skills, Projects) and clicking them updates the activeLink and the navbar-link style.
     <Router>
+      
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+        
         <Container>
         
           <Navbar.Brand href="/"  >
@@ -46,7 +48,7 @@ export const NavBar = () => {
        <div>Kevin.le</div> 
         
           </Navbar.Brand>
-        
+          <div id = 'disclaimer'> (DISCLAIMER: Portfolio is working in progress) </div>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>

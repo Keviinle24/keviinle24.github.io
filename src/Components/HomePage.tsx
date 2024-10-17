@@ -10,8 +10,10 @@ export default function HomePage() {
       
         <div className='parent'>
           <img id ='headshot' src={Headshot} alt=""/>
+
              <div className="name">Hi, It's&nbsp;<span className='kevin'>Kevin!</span></div><span className='roles'>I'm a&nbsp;<span></span></span>
-             <div className='caption'>As a student at Northeastern University pursuing a bachelor's degree in computer science, I am passionate about leveraging my technical knowledge to drive positive change in the tech industry. My interests lies in web and app development and I aspire to be a frontend or full stack developer.  </div>
+        
+             <div className='caption'>As a student at Northeastern University pursuing a bachelor's degree in computer science, I am passionate about leveraging my technical knowledge to drive positive change in the tech industry. My interests lies in web and app development and I aspire to be a frontend or full stack developer. </div>
 
              <span className="connect" ><button className="vvd" ><span>Lets connect!</span></button>      
              <div className="social-icon" style={{paddingLeft: 10}}>
