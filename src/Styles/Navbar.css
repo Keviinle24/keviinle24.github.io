@@ -17,6 +17,7 @@ nav.navbar {
       font-size: 40;    
       background: linear-gradient(270deg, #00fff0, #ff00f5);
       -webkit-background-clip: text;
+      background-clip: none;
       -webkit-text-fill-color: transparent;
       font-weight: 700;
       
@@ -48,6 +49,7 @@ nav.navbar {
     opacity: 1;
     background: linear-gradient(270deg, #00fff0, #ff00f5);
     -webkit-background-clip: text;
+    background-clip: none;
     -webkit-text-fill-color: transparent;
   }
   span.navbar-text {
