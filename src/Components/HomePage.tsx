@@ -7,8 +7,9 @@ import navIcon3 from '../Assets/Images/nav-icon3.svg';
 
 export default function HomePage() {
     return (
+      
         <div className='parent'>
-        
+          <img id ='headshot' src={Headshot} alt=""/>
              <div className="name">Hi, It's&nbsp;<span className='kevin'>Kevin!</span></div><span className='roles'>I'm a&nbsp;<span></span></span>
              <div className='caption'>As a student at Northeastern University pursuing a bachelor's degree in computer science, I am passionate about leveraging my technical knowledge to drive positive change in the tech industry. My interests lies in web and app development and I aspire to be a frontend or full stack developer.  </div>
 
@@ -18,9 +19,9 @@ export default function HomePage() {
                 <a href="#"><img src={navIcon2} alt="" /></a>
                 <a href="#"><img src={navIcon3} alt="" /></a>
               </div>            
-             <img className='headshot' src={Headshot} alt=""/></span>  
+           </span>  
     
-
+        
         </div>
     )
 }

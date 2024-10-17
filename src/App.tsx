@@ -6,12 +6,14 @@ import Skills from './Components/Skills';
 function App() {
  
   return (
+ 
     <div className="App" >
   <NavBar/>
   <HomePage/>
   <Skills/>
 
     </div>
+   
   );
 }
 

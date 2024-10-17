@@ -1,6 +1,46 @@
  .parent {
   line-height: 1.2;
+  
  }
+
+
+ #headshot {
+  width: 550;
+float: right;
+ 
+ margin-right: 13.2%;
+ margin-top: 200px;
+ margin-bottom: -100;
+
+ 
+}
+
+
+@media (max-width: 1400px) {
+  #headshot {
+    margin: 0 auto;
+    float: none;
+    display: flex;
+    margin-top: 200;
+    width: 600;
+    
+  }
+}
+
+
+@media (max-width: 1400px) {
+  .caption   {
+ min-width: 90%;
+  
+  }
+}
+
+@media (max-width: 1400px) {
+  .name   {
+margin-top: -200px;
+  }
+}
+
 .name {
   font-weight: bold;
   display: flex;
@@ -17,14 +57,16 @@
   background: linear-gradient(270deg, #00fff0, #ff00f5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+ 
+  
 }
 
 
 .caption {
-    font-size: 110%; /* Font size for the caption */
+    font-size: 120%; /* Font size for the caption */
     color: #898989; /* Medium gray text color for contrast */
  
-    width: 45%; /* Ensure the text does not exceed 80% of the container's width */
+    max-width: 45%;/* Ensure the text does not exceed 80% of the container's width */
     line-height: 1.5; /* Improve readability with line spacing */
     padding-left: 13%;
     margin-top: 40;
@@ -82,7 +124,7 @@ position: relative;
 @keyframes words {
   0%,
   20%{
-    content: "Student";
+    content: "Full-Stack Developer";
 
   }
   21%,
@@ -171,11 +213,3 @@ content: "Web Designer";
 
 
 
-
-.headshot {
-  width: 550;
-  display: flex;
-  margin-left: 52%;
-  margin-top: -570;
- 
-}
