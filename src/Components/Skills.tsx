@@ -21,16 +21,16 @@ export default function Skills() {
     Languages: 
     </div>
     <div className="col">
-    <img className='icon' src = {Javascript}/>
+    <img className='icon' src = {Javascript} alt=''/>
     </div>
     <div className="col">
-    <img className='icon' src = {HTML}/>
+    <img className='icon' src = {HTML} alt=''/>
     </div>
     <div className="col">
-    <img className='icon' src = {CSS}/>
+    <img className='icon' src = {CSS} alt=''/>
     </div>
     <div className="col">
-    <img className='icon' src = {Java}/>
+    <img className='icon' src = {Java} alt=''/>
     </div>
   </div>
   <div className="row">
@@ -38,10 +38,10 @@ export default function Skills() {
     OS:
     </div>
     <div className="col">
-    <img className='icon' src = {Windows}/>
+    <img className='icon' src = {Windows} alt=''/>
     </div>
     <div className="col">
-    <img className='icon' src = {MacOS}/>
+    <img className='icon' src = {MacOS} alt=''/>
     </div>
   </div>
   <div className="row">
@@ -49,16 +49,16 @@ export default function Skills() {
     Tools:
     </div>
     <div className="col">
-    <img className ='icon' src ={React}/>
+    <img className ='icon' src ={React} alt=''/>
     </div>
     <div className="col">
-    <img className='icon' src={Node}/>
+    <img className='icon' src={Node} alt=''/>
     </div>
     <div className="col">
-    <img className='icon' src={Unity}/>
+    <img className='icon' src={Unity} alt=''/>
     </div>
     <div className="col">
-    <img className='icon' src={Figma}/>
+    <img className='icon' src={Figma} alt=''/>
     </div>
   </div>
   
@@ -72,33 +72,33 @@ export default function Skills() {
 <div className="row row2">
 <div className="col">
 <div className="card" style={{width: '22rem'}}>
-     <img className='cover' src = {Javascript}/>
+     <img className='cover' src = {Javascript} alt=''/>
   <div className="card-body">
     <h5 className="card-title">Curve</h5>
     <p className="card-text">Curve is an AI-powered app that personalizes learning, generating a custom plan, including assessment questions, a condensed "textbook," and practice steps, for users to master new skills.</p>
-    <a href="#" className="btn btn-primary">See more</a>
+    <a href="https://devpost.com/software/curve-a5wcku?ref_content=contribution-prompt&ref_feature=engagement&ref_medium=email&utm_campaign=contribution-prompt&utm_content=contribution_reminder&utm_medium=email&utm_source=transactional#app-team" className="btn btn-primary">See more</a>
   </div>
   </div>
 </div>
 
 <div className="col">
 <div className="card" style={{width: '22rem'}}>
-     <img className='cover' src = {Javascript}/>
+     <img className='cover' src = {Javascript} alt=''/>
   <div className="card-body">
     <h5 className="card-title">CamRa</h5>
     <p className="card-text">CamRa is an exclusive video networking service designed specifically for college students, offering a unique platform to connect and engage with peers from their university and many others across the globe.</p>
-    <a href="#" className="btn btn-primary">See more</a>
+    <a href="https://main--officialcamra.netlify.app/login" className="btn btn-primary">See more</a>
   </div>
 </div></div>
 
 
 <div className="col">
 <div className="card" style={{width: '22rem'}}>
-     <img className='cover' src = {Javascript}/>
+     <img className='cover' src = {Javascript} alt=''/>
   <div className="card-body">
     <h5 className="card-title">Flow Fitness</h5>
     <p className="card-text">Worked closely with professionals to develop a mobile app and website prototype in Figma that incorporates design changes and many other new features, enhancing overall usability and gym experience for potential users.</p>
-    <a href="#" className="btn btn-primary">See more</a>
+    <a href="https://www.canva.com/design/DAGMYYVUJ50/-KpHykuzNtXSTHLW2oTnow/view?utm_content=DAGMYYVUJ50&utm_campaign=designshare&utm_medium=link&utm_source=editor" className="btn btn-primary">See more</a>
   </div>
 </div></div></div> 
 
@@ -106,31 +106,31 @@ export default function Skills() {
     
 <div className="col">
 <div className="card" style={{width: '22rem'}}>
-     <img className='cover' src = {Javascript}/>
+     <img className='cover' src = {Javascript} alt=''/>
   <div className="card-body">
     <h5 className="card-title">Harmony Notes</h5>
     <p className="card-text">Harmony Notes is 2D musical puzzle platformer made in Unity, designed with a focus on storytelling and visuals. Players take control of a whole note, navigating through music-themed levels and solving puzzles to progress. </p>
-    <a href="#" className="btn btn-primary">See more</a>
+    <a href="https://www.youtube.com/watch?v=NnzSG0QC4ck" className="btn btn-primary">See more</a>
   </div>
 </div></div>
 
 
 <div className="col">
 <div className="card" style={{width: '22rem'}}>
-     <img className='cover' src = {Javascript}/>
+     <img className='cover' src = {Javascript} alt =''/>
   <div className="card-body">
     <h5 className="card-title">Cyber-Shooter</h5>
     <p className="card-text">Cyber-Shooter is a 2D shooter game set in a cyber apocalyptic world powered by GameMaker, drawing inspiration from the popular video game “Call of Duty: Zombies”.<br/><br/></p>
-    <a href="#" className="btn btn-primary">See more</a>
+    <a href="https://keviinle24.itch.io/cyber-shooter" className="btn btn-primary">See more</a>
   </div></div></div>
 
   <div className="col">
 <div className="card" style={{width: '22rem'}}>
-     <img className='cover' src = {Javascript}/>
+     <img className='cover' src = {Javascript} alt=''/>
   <div className="card-body">
     <h5 className="card-title">Story-Hunters</h5>
     <p className="card-text">Story-Hunters is an app that allows users to share book reviews, recommend books, display the books they've read, and connect with fellow readers. The app also maps the little libraries around Boston.</p>
-    <a href="#" className="btn btn-primary">See more</a>
+    <a href="https://www.figma.com/deck/VlhqU4W85eJaNf29Gymejp/Story-Hunter-Slides?node-id=4-21&t=DVApIrwfxTCqZYuE-1" className="btn btn-primary">See more</a>
   </div></div></div>
   </div>
 </div>

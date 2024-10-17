@@ -4,7 +4,7 @@ import navIcon1 from '../Assets/Images/nav-icon1.svg';
 import navIcon2 from '../Assets/Images/nav-icon2.svg';
 import navIcon3 from '../Assets/Images/nav-icon3.svg';
 import DownloadIcon from '../Assets/Images/download-svgrepo-com.svg';
-import { HashLink } from 'react-router-hash-link'; //Import a HashLink to create links to sections within the page.
+// import { HashLink } from 'react-router-hash-link'; //Import a HashLink to create links to sections within the page.
 import '../Styles/Navbar.css'
 import {
   BrowserRouter as Router
@@ -54,19 +54,23 @@ export const NavBar = () => {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="/" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+              <Nav.Link href="/" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
+              <Nav.Link href="/" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
             </Nav>
             <span className="navbar-text" >
               <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
+              <a href="https://www.linkedin.com/in/kevinle24"  target="_blank" rel="noreferrer" ><img src={navIcon1} alt="linkedin" /></a>
+                <a href="https://www.instagram.com/kevin.le24/"  target="_blank" rel="noreferrer" ><img src={navIcon2} alt="facebook" /></a>
+                <a href="https://www.instagram.com/kevin.le24/" target="_blank" rel="noreferrer" ><img src={navIcon3} alt="instagram" /></a>
               </div>
               <div className="resume">
         
-              <a href="#"> <button className="vvd"><span>Resume <img className="download-icon" src={DownloadIcon} alt="" /></span></button></a>
+              <a href="/Downloads/Kevin_Le's_Resume.pdf" download>
+  <button className="downloadable">
+    <span>Resume <img className="download-icon" src={DownloadIcon} alt="resume" /></span>
+  </button>
+</a>
               </div>
             </span>
           </Navbar.Collapse>

@@ -17,9 +17,9 @@ export default function HomePage() {
 
              <span className="connect" ><button className="vvd" ><span>Lets connect!</span></button>      
              <div className="social-icon" style={{paddingLeft: 10}}>
-                <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon2} alt="" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
+                <a href="https://www.linkedin.com/in/kevinle24"  target="_blank" rel="noreferrer"><img src={navIcon1} alt="linkedin" /></a>
+                <a href="https://www.instagram.com/kevin.le24/"  target="_blank" rel="noreferrer"><img src={navIcon2} alt="facebook" /></a>
+                <a href="https://www.instagram.com/kevin.le24/" target="_blank" rel="noreferrer"><img src={navIcon3} alt="instagram" /></a>
               </div>            
            </span>  
     
