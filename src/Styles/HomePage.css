@@ -16,30 +16,25 @@ float: right;
 }
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
   #headshot {
     margin: 0 auto;
     float: none;
     display: flex;
     margin-top: 200;
-    width: 600;
+    width: 400;
     
   }
 }
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
   .caption   {
  min-width: 90%;
   
   }
 }
 
-@media (max-width: 1400px) {
-  .name   {
-margin-top: -200px;
-  }
-}
 
 .name {
   font-weight: bold;
@@ -47,11 +42,20 @@ margin-top: -200px;
   font-size: 80px;
   justify-content: flex-start; /* Align items to the left */
   padding-left: 13%;
-  padding-top: 300;
-   
-  
+  padding-top: 300; 
   
 }
+
+@media (max-width: 1450px) {
+  .name   {
+margin-top: -200px;
+font-size: 70px;
+  }
+  .kevin {
+    font-size: 70;
+  }
+}
+
 
 .kevin {
   background: linear-gradient(270deg, #00fff0, #ff00f5);
