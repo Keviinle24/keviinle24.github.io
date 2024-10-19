@@ -50,10 +50,10 @@ float: right;
 @media (max-width: 1450px) {
   .name   {
 margin-top: -200px;
-font-size: 70px;
+font-size: 65px;
   }
   .kevin {
-    font-size: 70;
+    font-size: 65px;
   }
 
 }
@@ -125,7 +125,7 @@ position: relative;
 
 @media (max-width: 1450px) {
 .roles{
-  font-size: 37;
+  font-size: 33px;
 }
 }
 
