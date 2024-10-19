@@ -15,7 +15,7 @@ export default function HomePage() {
         
              <div className='caption'>As a student at Northeastern University pursuing a bachelor's degree in computer science, I am passionate about leveraging my technical knowledge to drive positive change in the tech industry. My interests lies in web and app development and I aspire to be a frontend or full stack developer. </div>
 
-             <span className="connect" ><button className="vvd" ><span>Lets connect!</span></button>      
+             <span className="connect" ><a href="https://www.linkedin.com/in/kevinle24"  target="_blank" rel="noreferrer"><button className="vvd" ><span>Lets connect!</span></button>      </a>
              <div className="social-icon" style={{paddingLeft: 10}}>
                 <a href="https://www.linkedin.com/in/kevinle24"  target="_blank" rel="noreferrer"><img src={navIcon1} alt="linkedin" /></a>
                 <a href="https://www.instagram.com/kevin.le24/"  target="_blank" rel="noreferrer"><img src={navIcon2} alt="facebook" /></a>
