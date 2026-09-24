@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap"; //Navbar skeleton.
 import navIcon1 from '../Assets/Images/nav-icon1.svg';
-import navIcon2 from '../Assets/Images/nav-icon2.svg';
+import githubIcon from '../Assets/Images/github.svg';
 import navIcon3 from '../Assets/Images/nav-icon3.svg';
 import DownloadIcon from '../Assets/Images/download-svgrepo-com.svg';
 // import { HashLink } from 'react-router-hash-link'; //Import a HashLink to create links to sections within the page.
@@ -9,6 +9,8 @@ import '../Styles/Navbar.css'
 import {
   BrowserRouter as Router
 } from "react-router-dom";
+
+const sections = ['home', 'about', 'experience', 'skills', 'projects']; // Ids of the page sections the navbar links scroll to.
 
 export const NavBar = () => {
 
@@ -21,6 +23,15 @@ export const NavBar = () => {
         setScrolled(true); // If the user scrolls more than 50px, set `scrolled` to true. 
       } else {
         setScrolled(false);
+      }
+
+      // Highlight the link of the section currently on screen (the last one whose top has passed the upper third of the window).
+      const current = sections.filter((id) => {
+        const section = document.getElementById(id);
+        return section && section.getBoundingClientRect().top <= window.innerHeight / 3;
+      }).pop();
+      if (current) {
+        setActiveLink(current);
       }
     }
 
@@ -39,29 +50,31 @@ export const NavBar = () => {
     //Clicking on Links (Home, Skills, Projects) and clicking them updates the activeLink and the navbar-link style.
     <Router>
       
-      <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+      <Navbar expand="lg" collapseOnSelect className={scrolled ? "scrolled" : ""}>
         
         <Container>
         
-          <Navbar.Brand href="/"  >
+          <Navbar.Brand href="#home"  >
        
        <div>Kevin.le</div> 
         
           </Navbar.Brand>
-          <div id = 'disclaimer'> (DISCLAIMER: Portfolio is working in progress) </div>
+          <div id = 'disclaimer'> (DISCLAIMER: Portfolio is a work in progress) </div>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="/" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="/" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="/" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+            <Nav className="ms-auto" activeKey={`#${activeLink}`}>
+              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+              <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
+              <Nav.Link href="#experience" className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('experience')}>Experience</Nav.Link>
+              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
+              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
             </Nav>
             <span className="navbar-text" >
               <div className="social-icon">
               <a href="https://www.linkedin.com/in/kevinle24"  target="_blank" rel="noreferrer" ><img src={navIcon1} alt="linkedin" /></a>
-                <a href="https://www.instagram.com/kevin.le24/"  target="_blank" rel="noreferrer" ><img src={navIcon2} alt="facebook" /></a>
+                <a href="https://github.com/Keviinle24"  target="_blank" rel="noreferrer" ><img src={githubIcon} alt="github" /></a>
                 <a href="https://www.instagram.com/kevin.le24/" target="_blank" rel="noreferrer" ><img src={navIcon3} alt="instagram" /></a>
               </div>
               <div className="resume">

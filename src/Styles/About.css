@@ -1,0 +1,139 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: 28px;
+}
+
+.about-card {
+  padding: 36px;
+}
+
+.about-label {
+  margin-bottom: 16px;
+  color: #898989;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about-label:not(:first-child) {
+  margin-top: 36px;
+}
+
+.education-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px 20px;
+}
+
+.education-school {
+  width: fit-content;
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.education-college {
+  margin: 6px 0 0;
+  color: #d9d9d9;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.education-degree {
+  margin: 14px 0 0;
+  color: #b5b5b5;
+  font-size: 17px;
+}
+
+.education-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.stat {
+  display: flex;
+  flex: 1 1 160px;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(217, 217, 217, 0.06);
+}
+
+.stat-value {
+  width: fit-content;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stat-label {
+  color: #898989;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.highlights {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.highlights li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 0 20px 26px;
+  line-height: 1.4;
+}
+
+.highlights li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(40deg, #00fff0, #ff00f5);
+  box-shadow: 0 0 12px rgba(255, 0, 245, 0.5);
+}
+
+.highlight-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.highlight-detail {
+  color: #b5b5b5;
+  font-size: 16px;
+}
+
+@media (max-width: 991px) {
+  .about-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .about-card {
+    padding: 26px 22px;
+  }
+
+  .education-school {
+    font-size: 26px;
+  }
+
+  .stat-value {
+    font-size: 26px;
+  }
+}

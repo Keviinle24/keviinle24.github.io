@@ -78,3 +78,127 @@ p.success {
 p.danger {
 	color: red;
 }
+
+/* ---------- Shared section styles ---------- */
+
+.page-section {
+  scroll-margin-top: -120px; /* Land on the title instead of the empty space above it. */
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 200px;
+  margin: 0 0 70px;
+}
+
+.section-title::after,
+.skills::after,
+.projects::after {
+  content: "";
+  width: 72px;
+  height: 4px;
+  margin-top: 14px;
+  border-radius: 4px;
+  background: linear-gradient(270deg, #00fff0, #ff00f5);
+}
+
+.gradient-text {
+  background: linear-gradient(270deg, #00fff0, #ff00f5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card {
+  background: rgba(18, 18, 18, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 24px 48px -28px rgba(255, 0, 245, 0.5), 0 16px 40px -28px rgba(0, 255, 240, 0.5);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(217, 217, 217, 0.08);
+  color: #d9d9d9;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  transition: color 0.3s ease-in-out;
+}
+
+.tag:hover {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(#161616, #161616) padding-box, linear-gradient(40deg, #00fff0, #ff00f5) border-box;
+}
+
+.date-pill {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(217, 217, 217, 0.06);
+  color: #d9d9d9;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Fade + slide elements in as they scroll into view (only in browsers that support scroll-driven animations). */
+/* Longhands only: the production CSS minifier reorders declarations, and an `animation` shorthand would reset the timeline. */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation-name: reveal-up;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    translate: 0 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-section {
+    scroll-margin-top: -40px;
+  }
+
+  .section-title {
+    font-size: 40px;
+    padding-top: 120px;
+    margin-bottom: 44px;
+  }
+}

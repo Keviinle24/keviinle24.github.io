@@ -10,7 +10,10 @@ nav.navbar {
   }
   nav.navbar.scrolled {
     padding: 8px 0; 
-    background-color: #121212;
+    background-color: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
   }
   nav.navbar a.navbar-brand {
        
@@ -29,7 +32,7 @@ nav.navbar {
     font-weight: 500;
     color: #fff !important;
     letter-spacing: 0.8px;
-    padding: 0 25px;
+    padding: 0 18px;
     font-size: 18px;
     opacity: 0.75;
 
@@ -195,5 +198,70 @@ nav.navbar {
   .resume a img {
 
     transition: 0.3s ease-in-out;
+}
+
+#disclaimer {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+}
+
+/* Keep the icons and the resume button on one line. */
+nav.navbar span.navbar-text .social-icon,
+nav.navbar .resume {
+  flex-shrink: 0;
+}
+
+nav.navbar .navbar-text button {
+  white-space: nowrap;
+}
+
+/* The disclaimer only fits next to all the links on wide screens. */
+@media (max-width: 1399px) {
+  #disclaimer {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    padding: 0 12px;
+  }
+
+  nav.navbar .navbar-text button {
+    margin-left: 12px;
+    padding: 14px 22px;
+  }
+}
+
+/* Collapsed (hamburger) menu on smaller screens. */
+@media (max-width: 991px) {
+  nav.navbar .navbar-collapse {
+    margin-top: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background-color: rgba(18, 18, 18, 0.96);
+  }
+
+  nav.navbar .navbar-nav {
+    padding: 12px 20px 0;
+  }
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    padding: 10px 0;
+  }
+
+  nav.navbar span.navbar-text {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 8px 20px 20px;
+  }
+
+  nav.navbar span.navbar-text .social-icon {
+    margin-left: 0;
+  }
+
+  nav.navbar .navbar-text button {
+    margin-left: 0;
+  }
 }
 

@@ -1,5 +1,6 @@
  .parent {
   line-height: 1.2;
+  display: flow-root; /* Keeps the headshot's top margin inside, so the "Home" link scrolls to the very top. */
   
  }
 
@@ -11,6 +12,7 @@ float: right;
  margin-right: 13.2%;
  margin-top: 200px;
  margin-bottom: -100;
+ filter: drop-shadow(0 0 45px rgba(255, 0, 245, 0.22)) drop-shadow(0 0 25px rgba(0, 255, 240, 0.12));
 
  
 }
@@ -108,19 +110,26 @@ position: relative;
 
 .roles span::before {
   content: "Web Developer";
-  color: linear-gradient(270deg, #00fff0, #ff00f5);
-  animation: words 20s infinite;
+  display: inline-block;
+  max-width: 16em;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  background: linear-gradient(270deg, #00fff0, #ff00f5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: words 24s infinite, typing 4s infinite;
 }
 
+/* Blinking cursor that follows the end of the typed word. */
 .roles span::after{
   content: "";
-  background-color: linear-gradient(270deg, #00fff0, #ff00f5);
   position: absolute;
-  width: calc(100% + 8px);
-  height: 100%;
-  border-left: 3px solid linear-gradient(270deg, #00fff0, #ff00f5);
+  top: 12%;
+  height: 76%;
+  border-left: 3px solid #00fff0;
   right: -8px;
-  animation: cursor 0.6s infinite, typing 20s steps (14) infinite;
+  animation: cursor 0.8s step-end infinite;
 }
 
 @media (max-width: 1450px) {
@@ -130,58 +139,66 @@ position: relative;
 }
 
 @keyframes cursor{
-  to {
-    border-left: 2px solid linear-gradient(270deg, #00fff0, #ff00f5);
+  50% {
+    border-left-color: transparent;
   }
 }
 
+/* Each word gets a 4s slot, which lines up with one cycle of the typing animation. */
 @keyframes words {
   0%,
-  20%{
+  16%{
     content: "Full-Stack Developer";
 
   }
-  21%,
-  40%{
+  17%,
+  33%{
+    content: "Geospatial Analyst";
+  }
+  34%,
+  50%{
     content: "Web Developer" ;
   }
-  41%,
-  60%{
+  51%,
+  66%{
     content: "Mobile Developer";
   }
-  61%,
-  80%{
+  67%,
+  83%{
 content: "Web Designer";
   }
-  81%,
+  84%,
   100% {
     content: "Game Developer";
   }
 }
 
+/* Types the word out, holds it, then deletes it before the next word swaps in. */
 @keyframes typing{
-  10%, 
-  15%,
-  30%,
-  35%,
-  50%,
-  55%,
-  70%,
-  75%,
-  90%,
-  95%{
-    width: 0;
+  0%,
+  5%{
+    max-width: 0;
+    animation-timing-function: steps(40, end);
   }
-  5%,
-  20%,
-  25%,
-  40%,
   45%,
-  60%,
-  65%,
-  80%,
   85%{
-    width: calc(100%+8px)
+    max-width: 16em;
+    animation-timing-function: steps(40, end);
+  }
+  97%,
+  100%{
+    max-width: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .roles span::before {
+    max-width: none;
+    animation: words 24s infinite;
+  }
+
+  .roles span::after {
+    animation: none;
   }
 }
 
@@ -200,6 +217,9 @@ content: "Web Designer";
   }
   .connect button span {
     z-index: 1;
+  }
+  .connect a {
+    text-decoration: none;
   }
   .connect button::before {
     content: "";
@@ -223,6 +243,91 @@ content: "Web Designer";
     height: 100%;
     position: absolute;
     
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 28px 0 0 13%;
+  padding: 8px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: rgba(217, 217, 217, 0.1);
+  color: #d9d9d9;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.availability-dot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00fff0;
+  box-shadow: 0 0 10px #00fff0;
+}
+
+.availability-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #00fff0;
+  animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2.8);
+  }
+}
+
+@media (max-width: 576px) {
+  #headshot {
+    width: 260px;
+    margin-top: 110px;
+  }
+
+  .name {
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding-top: 36px;
+    padding-left: 7%;
+    font-size: 44px;
+  }
+
+  .kevin {
+    font-size: 44px;
+  }
+
+  .roles {
+    padding-left: 7%;
+    font-size: 24px;
+  }
+
+  .availability {
+    margin-left: 7%;
+    font-size: 14px;
+  }
+
+  .caption {
+    min-width: 100%;
+    padding-right: 7%;
+    padding-left: 7%;
+    font-size: 17px;
+  }
+
+  .connect button {
+    margin-top: 28px;
+    margin-left: 7%;
+  }
 }
 
 
