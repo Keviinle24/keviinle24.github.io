@@ -121,7 +121,7 @@ export default function Skills() {
     <p className="card-meta">Frontend Developer<span className="card-date">Mar 2024 – Dec 2024</span></p>
     <p className="card-text">CamRa is an exclusive video networking service designed specifically for college students, offering a unique platform to connect and engage with peers from their university and many others across the globe.</p>
     <div className="card-tags"><span>React.js</span><span>UI Design</span></div>
-    <a href="https://main--officialcamra.netlify.app/login" className="btn btn-primary" target="_blank" rel="noreferrer">See more</a>
+    <a href="https://main--officialcamra.netlify.app" className="btn btn-primary" target="_blank" rel="noreferrer">See more</a>
   </div>
 </div></div>
 
